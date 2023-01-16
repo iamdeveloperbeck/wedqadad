@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+          tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                },
+                screens: {
+                    '2xl': {'max': '1535px'},
+                    // => @media (max-width: 1535px) { ... }
+
+                    'xl': {'max': '1279px'},
+                    // => @media (max-width: 1279px) { ... }
+
+                    'lg': {'max': '991px'},
+                    // => @media (max-width: 1023px) { ... }
+
+                    'md': {'max': '767px'},
+                    // => @media (max-width: 767px) { ... }
+
+                    'sm': {'max': '479px'},
+                    // => @media (max-width: 639px) { ... }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <h1 class="font-[600] text-[100px] text-center text-[#333] lg:text-[80px] lg:text-[red] md:text-[60px]">Tailwind CSs</h1>
+
+    <div class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+        <img src="/person2.jpg" alt="" class="w-[] h-30 mx-auto md:w-48 md:h-auto">
+    </div>
+
+    <div class="grid grid-cols-[1fr_1fr_1fr]">
+        <div class="p-[10px_15px_20px_30px]">1</div>
+        <div class="p-[10px_15px_20px_30px]">2</div>
+        <div class="p-[10px_15px_20px_30px]">3</div>
+        <div class="p-[10px_15px_20px_30px]">4</div>
+    </div>
+
+</body>
+</html>
